@@ -9,6 +9,6 @@ setup(
     description='QR Scanner',
     install_requires=[
         'zbar==0.10',
-        'PIL==1.1.7',
+        'Pillow==2.5.3',
     ],
 )

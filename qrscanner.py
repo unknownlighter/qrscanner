@@ -1,6 +1,5 @@
 import zbar
-import Image
-import ImageFilter
+from PIL import Image, ImageFilter
 from math import atan2, degrees
 
 class RecognizedImage(object):
