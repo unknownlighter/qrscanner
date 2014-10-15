@@ -18,7 +18,8 @@ class QRScannerError(Exception):
 class QRScanner(object):
     def __init__(self):
         self.scanner = zbar.ImageScanner()
-        self.scanner.parse_config('enable')
+        self.scanner.parse_config('disable')
+        self.scanner.set_config(zbar.Symbol.QRCODE, zbar.Config.ENABLE, 1)
     
     def recognize_from_pil(self, pil):
         width, height = pil.size
