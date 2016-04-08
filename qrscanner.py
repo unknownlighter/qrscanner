@@ -22,7 +22,7 @@ class QRScanner(object):
     
     def recognize_from_pil(self, pil):
         width, height = pil.size
-        raw = pil.tostring()
+        raw = pil.tobytes()
         image = zbar.Image(width, height, 'Y800', raw)
         self.scanner.scan(image)
         return iter(image.symbols).next() if image.symbols else None
